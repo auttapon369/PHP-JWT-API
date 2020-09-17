@@ -1,11 +1,11 @@
 <?php
 class  DatabaseService{
 
-    private $db_host = "192.168.111.207";
-    private $db_host2 = "192.168.111.207";
-    private $db_name = "mwa_waterlevel";
-    private $db_user = "root";
-    private $db_password = "159357";
+    private $db_host = "0.0.0.0";
+    private $db_host2 = "0.0.0.0";
+    private $db_name = "****";
+    private $db_user = "********";
+    private $db_password = "********";
     private $connection;
 
     public function getConnection(){
