@@ -31,7 +31,7 @@ if($jwt){
 
         echo json_encode(array(
             "message" => "Access granted:",
-            "error" => "OK"//$e->getMessage()
+            "error" => $e->getMessage()
         ));
 
     }catch (Exception $e){
