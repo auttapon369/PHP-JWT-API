@@ -1,4 +1,5 @@
 <?php
+error_reporting(E_ALL);
 include_once 'config/database.php';
 require "vendor/autoload.php";
 use \Firebase\JWT\JWT;
@@ -18,16 +19,7 @@ $conn = $databaseService->getConnection();
 $data = json_decode(file_get_contents("php://input"));
 
 
-$authHeader = $_SERVER['HTTP_AUTHORIZATION'];
-
-$arr = explode(" ", $authHeader);
-
-
-/*echo json_encode(array(
-    "message" => "sd" .$arr[1]
-));*/
-
-$jwt = $arr[1];
+$jwt=isset($data->jwt) ? $data->jwt : "";
 
 if($jwt){
 
